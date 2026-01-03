@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+   		<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Student hinzufügen</title>
+    
+		<!-- Styling -->
+    	<!-- Bootstrap CSS: Styling & Layout (Buttons, Grid, Forms) -->
+    	<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}">
+    
+    	<!-- Open Iconic: Icon-Schriftart mit 200+ Symbolen -->
+    	<link rel="stylesheet" th:href="@{/webjars/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css}">
+	</head>
+	<body>
+		<h1>Student hinzufügen</h1>
+    
+		<form action="/student/add" method="post">
+			<label for="first-name">Vorname</label><br>
+			<input type="text" id="first-name" name="first-name" placeholder="Vorname" required><br>
+			
+			<label for="last-name">Nachname</label><br>
+			<input type="text" id="last-name" name="last-name" placeholder="Nachname" required><br>
+			
+			<label for="matriculation-number">Matrikelnummer</label><br>
+			<input type="text" id="matriculation-number" name="matriculation-number" placeholder="Matrikelnummer" required><br>
+			
+			<label for="email">E-Mail</label><br>
+			<input type="email" id="email" name="email" placeholder="E-Mail" required><br><br>
+			
+			<button type="submit">Hinzufügen</button>
+		</form>
+    
+		<!-- JavaScript -->
+    	<!-- jQuery: JavaScript-Grundlage (wird von Bootstrap benötigt) -->
+    	<script th:src="@{/webjars/jquery/3.7.1/jquery.min.js}"></script>
+    
+    	<!-- jQuery Mask Plugin: Eingabe-Formatierung (Telefon, Datum, etc.) -->
+    	<script th:src="@{/webjars/jquery-mask-plugin/1.14.16/dist/jquery.mask.min.js}"></script>
+    
+    	<!-- Bootstrap JS: Interaktive Komponenten (Modals, Dropdowns, etc.) -->
+    	<script th:src="@{/webjars/bootstrap/4.1.0/js/bootstrap.min.js}"></script>
+	</body>
+</html>
